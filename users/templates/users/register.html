@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+
+</head>
+<body>
+    <h2>用户注册</h2>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <label for="username">账号:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">密码:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <label for="confirm_password">确认密码:</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" required><br>
+        <div class="inline-elements">
+            <button type="submit">注册</button>
+            <a href="/user/login/" style="margin-left: 10px;">已有账号？点击登录</a>
+        </div>
+    </form>
+</body>
+</html>

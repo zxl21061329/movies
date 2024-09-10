@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommended Movies</title>
+</head>
+<body>
+    <h1>Recommended Movies</h1>
+    <ul>
+        {% for movie in recommended_movies %}
+            <li>{{ movie.title }}</li>
+        {% empty %}
+            <li>No recommendations available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
