@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'movies_recommend.apps.MoviesRecommendConfig',
-    'recommendations.apps.RecommendationsConfig'
+    'recommendations.apps.RecommendationsConfig',
+    'comni.apps.ComniConfig'
 ]
 
 MIDDLEWARE = [
